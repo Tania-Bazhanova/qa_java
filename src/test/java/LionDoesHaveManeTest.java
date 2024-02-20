@@ -1,3 +1,4 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class LionDoesHaveManeTest {
 
     @Test
     public void lionDoesHaveMane() throws Exception {
-        Lion lion = new Lion(sex);
+        Lion lion = new Lion(sex, new Feline());
         boolean actualMane = lion.doesHaveMane();
         Assert.assertEquals("Присутсвие/отсутствие гривы не совпадает", expectedMane, actualMane);
     }
